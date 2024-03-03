@@ -7,32 +7,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(cnBase(inputs));
 }
 
-export const geolocation = {
-  kathmandu: [27.70169, 85.3206] as [number, number],
-  lalitpur: [27.67658, 85.31417] as [number, number]
-};
-
-export function hasPassedTime(timeStr: string) {
-  const currentDate = new Date();
-  const [time, period] = timeStr.split(" ");
-  const [hours, minutes, seconds] = time.split(":").map(Number);
-
-  let adjustedHours = hours;
-  if (period.toLowerCase() === "pm") {
-    adjustedHours += 12;
-  }
-
-  const timeToCompare = new Date();
-  timeToCompare.setHours(adjustedHours, minutes, seconds, 0);
-
-  return currentDate > timeToCompare;
-}
-
-// Example usage:
-const timeStr = "6:32:56 AM";
-const isTimePassed = hasPassedTime(timeStr);
-console.log("Has time passed?", isTimePassed);
-
 export function flyAndScale(
   node: Element,
   params: { x?: number; y?: number; start?: number; duration?: number } = {}
