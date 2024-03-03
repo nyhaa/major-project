@@ -48,7 +48,7 @@
   <Command.List>
     <Command.Empty>No results found.</Command.Empty>
     <Command.Group heading="Suggestions">
-      {#each Object.keys(cities) as c}
+      {#each cities as c}
         <Command.Item
           class="capitalize"
           onSelect={() => {

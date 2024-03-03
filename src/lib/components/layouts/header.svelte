@@ -1,7 +1,7 @@
 <script lang="ts">
   import { mode, setMode } from "mode-watcher";
   import { commandMenuOpened } from "$lib/stores";
-  import GlobeIcon from "$lib/components/globe-icon.svelte";
+  import CarIcon from "$lib/components/car-icon.svelte";
   import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
   import { Button, buttonVariants } from "$lib/components/ui/button";
 
@@ -16,7 +16,7 @@
 <header class="py-2 md:py-4 border-b sticky top-0 bg-background z-10">
   <div class="container flex">
     <a href="/" class="outline-none">
-      <GlobeIcon class="w-10 h-10" />
+      <CarIcon class="w-10 h-10" />
     </a>
 
     <div class="ml-auto inline-flex items-center space-x-2 md:space-x-4">
